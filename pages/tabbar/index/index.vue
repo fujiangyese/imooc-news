@@ -1,52 +1,36 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+    <view class="content">
+        <!-- 自定义导航栏组件 -->
+        <navbar></navbar>
+        <tab :list="tabList"></tab>
+    </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	}
+// easyCom components/组件名/组件名.vue可以直接使用组件，而不需要引入注册 局部引入
+// import navbar from "@/components/navbar/navbar.vue"
+export default {
+    // components:{navbar},
+    data() {
+        return {
+            title: 'Hello',
+            tabList: []
+        };
+    },
+    onLoad() {
+        this.getLabel();
+    },
+    methods: {
+        getLabel() {
+            uniCloud.callFunction({
+                name: 'get_label'
+            }).then((res)=>{
+                const {result} = res
+                this.tabList = result.data
+            });
+        }
+    }
+};
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
-</style>
+<style lang="scss"></style>

@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_2120983_kaetb5zt55.eot?t=1602330176211'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_2120983_kaetb5zt55.eot?t=1602330176211#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALUAAsAAAAABnQAAAKFAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBAIEeATYCJAMICwYABCAFhG0HMBvEBcgusG3YE0KggGI1BtX94X9AhHj42u937u5+xD3SPYuGSKIRClUsNqbTvXsjlDe5pmkzQEVuuwwVICqE7zd54DQjR6RZIyqWY0cg3GT16uEqt9F6uoG6+tr/HDNePY/C/EBzyUiOBBzYdIBRRSPbSI78hrELXMJpAk3GxLFtV9Q1Ah+FNSkQZ5LAAZ+cT1FYskGoq1lZxANPDekyPQLuw9/Hn5TwIallVtneabkTFH1ip8GLalinb7A6nwVsHRkrgEIc1cZ2QMHwUFPMwxSwr+LgM/C/8g1ir1rB/nVWYQsYgbx74ruCWy1MoMS9c4DNUXeThgKGmhdCD95sr8/Nzza+1DT3ljsf0rQ1dz2il7Fvt+z2bC6K+JCachbGZ8KVp6cluJx9DVxJxY/xLhl8+E5Q6ieS/1Tszfa5G7snlrBEpJTZG7vEhn8HFAGoOvNdcgsE/5/2yHP7+BfwsXFdFHqqzgL6OWg4hT34VfyeLUUXWvpUVH6tI5kbNTGhSRMqgF1dfseqeu8rFRr03p2j3mgKWYMZRMGsQE2zVajTYA2aLKtc36wbBUVpxJIJAKHDASRtHiHr8IQomB+o6fMHdToCQpOTCNqx2VxIfqUUcww7kWMISbyhE8fI/KLieiz0qRzNCkNqM6YuKYiSE5KKyUqsYzrHHFe/kMIYQYQaGqoA52FVNZBJDRnzLEFkzMxJTCR1H0rgDQ342UJhHAZzQhyGIBKeQUf87oxf6fv1MEEfFYe2VNRYm2GUi9Q/kixBUg9EpUzvVXEv77j0E6RgGAIhKIMGqQDDMJXKgJj1w2QYj0kgjoiYciTanUhfWcL6Cu0DclkNljqFPSirO8cc5UUAAAAAAA==') format('woff2'),
+  url('//at.alicdn.com/t/font_2120983_kaetb5zt55.woff?t=1602330176211') format('woff'),
+  url('//at.alicdn.com/t/font_2120983_kaetb5zt55.ttf?t=1602330176211') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_2120983_kaetb5zt55.svg?t=1602330176211#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-search:before {
+  content: "\e60d";
+}
+.navbar .navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: #f07373;
+}
+.navbar .navbar-fixed .navbar-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 45px;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.navbar .navbar-fixed .navbar-content .navbar-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #ffffff;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+}
+.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search_icon {
+  margin: 0 10px 0 10px;
+}
+.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search_text {
+  font-size: 12px;
+  color: #999999;
+}
+
