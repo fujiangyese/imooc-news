@@ -1,8 +1,12 @@
 <template>
-    <view class="content">
+    <view class="home">
         <!-- 自定义导航栏组件 -->
         <navbar></navbar>
-        <tab :list="tabList"></tab>
+        <tab :list="tabList" @tab="tab"></tab>
+        <list-scroll>
+            <list-card v-for="item in 5"></list-card>
+            <!-- 填充数据 -->
+        </list-scroll>
     </view>
 </template>
 
@@ -22,15 +26,32 @@ export default {
     },
     methods: {
         getLabel() {
-            uniCloud.callFunction({
-                name: 'get_label'
-            }).then((res)=>{
-                const {result} = res
-                this.tabList = result.data
-            });
+            uniCloud
+                .callFunction({
+                    name: 'get_label'
+                })
+                .then(res => {
+                    const { result } = res;
+                    this.tabList = result.data;
+                });
+        },
+        tab(data) {
+            let { item, index } = data;
+            console.log(item, index);
         }
     }
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+page {
+    height: 100%;
+    display: flex;
+    .home {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        border: 1px solid red;
+    }
+}
+</style>

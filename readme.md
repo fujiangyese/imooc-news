@@ -24,5 +24,14 @@
 
 ## 选项卡数据初始化
 1. 实现第一个云函数
-2. 
+
+## 选项卡切换
+1. 实现选项卡切换高亮效果
+2. 定义一个active类，当选中某一个选项就给该选项添加上这个类名
+3. 在item上面绑定clickTab方法，接收item和index
+4. :class="{active:activeIndex===index}"，当activeIndex属性等于index时才添加active类名
+5. 在clickTab函数中设置this.activeIndex = index
+6. 通过this.$emit('tab',{data:item,index:index})定义tab事件，将子组件数据传递给父组件
+
+## 基础卡片视图实现
 
